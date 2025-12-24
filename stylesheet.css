@@ -1,0 +1,219 @@
+/* Import Google Fonts - Using distinctive fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* CSS Variables for easy theming */
+:root {
+  --primary-color: #1a5f7a;
+  --accent-color: #c97c5d;
+  --text-color: #2d3436;
+  --text-light: #636e72;
+  --bg-color: #fefefe;
+  --card-bg: #f8f9fa;
+  --border-color: #e9ecef;
+}
+
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* Typography */
+p {
+  margin: 0 0 1em 0;
+}
+
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Name styling */
+.name {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-top: 20px;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Paper title styling */
+.papertitle {
+  font-family: 'Source Sans Pro', Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Image container */
+.one {
+  width: 200px;
+  height: 150px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.one img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Profile photo */
+.hoverZoomLink {
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverZoomLink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Lists */
+ul {
+  margin: 10px 0;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Tables */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px;
+}
+
+/* Transitions */
+.fade {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Highlight */
+span.highlight {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .name {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  .one {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+  }
+  
+  table {
+    width: 100% !important;
+  }
+  
+  td {
+    display: block;
+    width: 100% !important;
+    padding: 10px 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Print styles */
+@media print {
+  body {
+    font-size: 12pt;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .hoverZoomLink {
+    box-shadow: none;
+  }
+}
+
